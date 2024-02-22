@@ -51,6 +51,9 @@ resource "google_container_node_pool" "primary_nodes" {
       "https://www.googleapis.com/auth/monitoring",
     ]
 
+    disk_size_gb = 40 // Reduce this value
+
+
     labels = {
       env = var.project_id
     }
